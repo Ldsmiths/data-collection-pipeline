@@ -1,12 +1,14 @@
 projects = [
     {
-        name: "Project 1",
+        name: "Orthoimagery Acquisition - Brazos",
+        id: "580150827",
         img: "https://data.tnris.org/beb4837b-9ed1-4d25-8942-8c3007e45230/assets/3954813d-ece2-4897-94b0-c8b871804bfa.jpg",
         alt: "test",
         status: "Awarded",
         display: "Awarded",
         description: "Brief description of project details lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         link: "https://user-images.githubusercontent.com/4921113/105534143-ac533380-5cb2-11eb-9fc5-1d86864dbf1f.png",
+        fund: "Brazos Central Appraisal, Bryan Texas Utilities, City of Bryan, City of College Station, City of Palestine, Texas A&M University, Texas Municipal Power Agency",
     },
     {
         name: "Project 2",
@@ -37,8 +39,9 @@ projects.forEach(project => {
           <h2 class="post-title">
           ${project.name}
             </a>
-          </h2>
-          ${project.description}
+          </h2><small>#${project.id}</small><br><br>
+          ${project.description}<br><br>
+          <b><u>Funding:</u></b> <small>${project.fund}</small>
           <br><br>
           <a href="${project.link}" target="_blank"><button>More Info</button></a>
         </figcaption>
