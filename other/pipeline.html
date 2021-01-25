@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section class="author-archive">
+        <input type="radio" id="All" name="categories" value="All" checked>
+        <input type="radio" id="Awarded" name="categories" value="Awarded">
+        <input type="radio" id="Acquisition" name="categories" value="Acquisition">
+        <input type="radio" id="Processing" name="categories" value="Processing">
+        <input type="radio" id="Post-Processing" name="categories" value="Post-Processing">
+
+            <ol class="filters">
+                <li>
+                <label for="All">All</label>
+                </li>
+                <li>
+                <label for="Awarded">Awarded</label>
+                </li>
+                <li>
+                <label for="Acquisition">In Acquisition</label>
+                </li>
+                <li>
+                <label for="Processing">Processing</label>
+                </li>
+                <li>
+                <label for="Post-Processing">Post-Processing</label>
+                </li>
+            </ol>
+            <ul class="posts">
+            </ul>
+    </section>
+
+
+    <ul class="posts">
+        <div id="insert-here">
+          <!-- training records get inserted here from the tnris api (see training.js) -->
+        </div>
+        </ul>
+</body>
+<script src="pipeline.js"></script>
+</html>
