@@ -4,39 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
     <section class="author-archive">
         <input type="radio" id="All" name="categories" value="All" checked>
-        <input type="radio" id="Awarded" name="categories" value="Awarded">
+        <input type="radio" id="Solicitation" name="categories" value="Solicitation">
+        <input type="radio" id="Evaluation/Award" name="categories" value="Evaluation/Award">
+        <input type="radio" id="Kick-Off" name="categories" value="Kick-Off">
         <input type="radio" id="Acquisition" name="categories" value="Acquisition">
         <input type="radio" id="Processing" name="categories" value="Processing">
-        <input type="radio" id="Post-Processing" name="categories" value="Post-Processing">
+        <input type="radio" id="QC" name="categories" value="QC">
+        <input type="radio" id="Release" name="categories" value="Release">
 
             <ol class="filters">
                 <li>
                 <label for="All">All</label>
                 </li>
                 <li>
-                <label for="Awarded">Awarded</label>
+                <label for="Solicitation">Solicitation</label>
                 </li>
                 <li>
-                <label for="Acquisition">In Acquisition</label>
+                <label for="Evaluation/Award">Evaluation/Award</label>
+                </li>
+                <li>
+                <label for="Kick-Off">Kick-Off</label>
+                </li>
+                <li>
+                <label for="Acquisition">Acquisition</label>
                 </li>
                 <li>
                 <label for="Processing">Processing</label>
                 </li>
                 <li>
-                <label for="Post-Processing">Post-Processing</label>
+                <label for="QC">QC</label>
+                </li>
+                <li>
+                <label for="Release">Release</label>
                 </li>
             </ol>
-    </section>
 
 
     <ul id="insert-here" class="posts">
           <!-- training records get inserted here from the tnris api (see training.js) -->
-        </ul>
+    </ul>
+
+
+<div class="multiple_elements">
+  
+    <h2>Project Status</h2>
+    <div class="ct"><small>Hover/tap on the element to learn about project phases</small></div><br>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary ole" data-toggle="tooltip" data-placement="left" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Solicitation
+      </button>
+  
+      <button type="button" class="btn btn-primary ole two" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Evaluation/Award
+      </button>
+  
+        <button type="button" class="btn btn-primary ole three" data-toggle="tooltip" data-placement="top" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Kick-Off
+      </button>
+  
+      
+      <button type="button" class="btn btn-primary ole four" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Acquisition
+      </button>
+  
+      <button type="button" class="btn btn-primary ole five" data-toggle="tooltip" data-placement="top" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Processing
+      </button>
+      
+          <button type="button" class="btn btn-primary ole six" data-toggle="tooltip" data-placement="bottom" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        QC
+      </button>
+      
+          <button type="button" class="btn btn-primary ole seven" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        Release
+      </button>
+      
+    </div>
+  
+  </div>
+</section>
 </body>
 <script src="pipeline.js"></script>
 </html>

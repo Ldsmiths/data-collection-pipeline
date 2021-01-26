@@ -4,6 +4,7 @@
     --black: #3a3a3a;
     --white: #fff;
     --blue: #1e8dc0;
+    font-size: 16px;
   }
   
   * {
@@ -148,11 +149,13 @@
   /* FILTERING RULES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   [value="All"]:checked ~ .filters [for="All"],
-  [value="Awarded"]:checked ~ .filters [for="Awarded"],
+  [value="Solicitation"]:checked ~ .filters [for="Solicitation"],
+  [value="Evaluation/Award"]:checked ~ .filters [for="Evaluation/Award"],
+  [value="Kick-Off"]:checked ~ .filters [for="Kick-Off"],
   [value="Acquisition"]:checked ~ .filters [for="Acquisition"],
   [value="Processing"]:checked ~ .filters [for="Processing"],
-  [value="Post-Processing"]:checked ~ .filters [for="Post-Processing"],
-  [value="Slider"]:checked ~ .filters [for="Slider"],
+  [value="QC"]:checked ~ .filters [for="QC"],
+  [value="Release"]:checked ~ .filters [for="Release"],
   [value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
     background: var(--blue);
     color: var(--white);
@@ -162,11 +165,13 @@
     display: block;
   }
   
-  [value="Awarded"]:checked ~ .posts .post:not([data-category~="Awarded"]),
+  [value="Solicitation"]:checked ~ .posts .post:not([data-category~="Solicitation"]),
+  [value="Evaluation/Award"]:checked ~ .posts .post:not([data-category~="Evaluation/Award"]),
+  [value="Kick-Off"]:checked ~ .posts .post:not([data-category~="Kick-Off"]),
   [value="Acquisition"]:checked ~ .posts .post:not([data-category~="Acquisition"]),
   [value="Processing"]:checked ~ .posts .post:not([data-category~="Processing"]),
-  [value="Post-Processing"]:checked ~ .posts .post:not([data-category~="Post-Processing"]),
-  [value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
+  [value="QC"]:checked ~ .posts .post:not([data-category~="QC"]),
+  [value="Release"]:checked ~ .posts .post:not([data-category~="Release"]),
   [value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
     display: none;
   }
@@ -205,3 +210,99 @@
 
     /* Div
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+  .ole,
+  .elo {
+    background: rgb(220,260,255);
+    padding: 6px 36px;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 4px;
+    border:10;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .ct {
+    text-align: center
+  }
+  
+  .two {
+    background: rgb(180,240,255);
+  }
+  
+  .three {
+    background: rgb(150,220,252);
+  }
+  
+  .four {
+    background: rgb(120,200,242);
+  }
+  
+  .five {
+    background: rgb(90,180,222);
+  }
+  
+  .six {
+    background: rgb(60,160,202);
+  }
+  
+  .seven {
+    background: rgb(30,141,192);
+  }
+  
+  .ole:hover,
+  .elo:hover {
+    background: rgb(30,141,192);
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: 0 0 0 #555;
+  }
+  
+  .multiple_elements {
+    padding: 30px 0 10px 0;
+    text-align: center;
+  }
+  
+  /*customizing tooltip color*/
+  /*right tooltip*/
+  .tooltip.right > .tooltip-arrow {
+    border-right-color: rgb(30,141,192);
+  }
+  
+  /*bottom tooltip*/
+  .tooltip.bottom > .tooltip-arrow {
+    border-bottom-color: rgbrgb(30,141,192);
+  }
+  
+  /*top tooltip*/
+  .tooltip.top > .tooltip-arrow {
+    border-top-color: rgb(30,141,192);
+  }
+  
+  /*left tooltip*/
+  .tooltip.left > .tooltip-arrow {
+    border-left-color: rgb(30,141,192);
+  }
+  
+  /*tooltip inner*/
+  .tooltip > .tooltip-inner {
+    background-color: rgb(30,141,192);
+    font-weight: normal;
+  }
+  
+  code {
+    color: royalblue;
+    background-color: azure;
+  }
+  
+  @media (max-width:640px) {
+    .ole,
+    .elo {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+  
+  
