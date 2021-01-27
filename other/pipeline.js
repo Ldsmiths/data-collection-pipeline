@@ -15,18 +15,10 @@ function retrieveTraining(queryField, queryValue) {
       data.results.forEach(function(t) {
         // use api values to create clean variables to use in html below
         var record = document.createElement('div');
-        // create start and end date time arrays by splitting at spaces
-        var startDateArray = t.start_date_time.split(' ');
-        var month = startDateArray[1];
-        // use today date compared to end date and registration_open status to determine button used in training record
-        // NOTE: this is really meant to catch any courses that haven't been updated properly in the api, so the user doesn't
-        // see innaccurate information on the education page.
-  
-        // urlize the title to be added after hash in url; regex replaces characters with one hyphen
-        // first 8 characters of training id added just in case there is a url title conflict (same course more than once in same month & yr)
+
         record.innerHTML =
           `
-          <li class="post" data-category=${t.title}>
+          <li class="post" data-category=${t.category}>
           <article>
             <figure>
             <img src=${t.title} alt=${t.title}>
@@ -34,7 +26,7 @@ function retrieveTraining(queryField, queryValue) {
               <figcaption>
                 <ol class="post-categories">
                   <li>
-                    <a href="">${t.title}</a>
+                    <a href="">${t.category}</a>
                   </li>
                 </ol>
                 <h2 class="post-title">
